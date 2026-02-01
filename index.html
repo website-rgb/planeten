@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="Anton Kühnert" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <p class="descr">Planeten</p>
+    </div>
+    <h1>Nach Planeten suchen</h1>
+    <input list="sections" id="search" placeholder="Suchen..." />
+    <datalist id="sections">
+      <option value="Merkur"></option>
+      <option value="Venus"></option>
+      <option value="Erde"></option>
+      <option value="Mars"></option>
+      <option value="Jupiter"></option>
+      <option value="Saturn"></option>
+      <option value="Uranus"></option>
+      <option value="Neptun"></option>
+    </datalist>
+    <script>
+      const sections = {
+        Merkur: "section1",
+        Venus: "section2",
+        Erde: "section3",
+        Mars: "section4",
+        Jupiter: "section5",
+        Saturn: "section6",
+        Uranus: "section7",
+        Neptun: "section8",
+      };
+      const input = document.getElementById("search");
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          const id = sections[input.value];
+          if (id)
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+      });
+      input.addEventListener("change", () => {
+        const id = sections[input.value];
+        if (id)
+          document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+    <br />
+    <hr />
+    <h1 id="section1">Merkur – Der sonnennächste Planet</h1>
+    <p class="p">
+      Merkur ist der Planet, der der Sonne am nächsten ist. Er ist auch der
+      kleinste Planet im Sonnensystem. Da Merkur fast keine Atmosphäre besitzt,
+      kann er die Wärme der Sonne nicht speichern. Deshalb gibt es dort extreme
+      Temperaturunterschiede: Am Tag kann es über 400 °C heiß werden, in der
+      Nacht fällt die Temperatur auf etwa –180 °C. Ein Jahr auf Merkur ist sehr
+      kurz, weil er nur 88 Erdentage für einen Umlauf um die Sonne braucht. Ein
+      Tag auf Merkur ist dagegen sehr lang.
+    </p>
+    <hr />
+    <h1 id="section2">Venus – Der heißeste Planet</h1>
+    <p class="p">
+      Die Venus ist fast genauso groß wie die Erde, wird aber oft als ihr „böser
+      Zwilling“ bezeichnet. Ihre dichte Atmosphäre besteht hauptsächlich aus
+      Kohlendioxid und sorgt für einen starken Treibhauseffekt. Dadurch ist die
+      Venus der heißeste Planet im Sonnensystem – sogar heißer als Merkur. Die
+      Oberfläche ist von Vulkanen und dichten Wolken bedeckt. Außerdem dreht
+      sich die Venus sehr langsam und in die entgegengesetzte Richtung als die
+      meisten anderen Planeten.
+    </p>
+    <hr />
+    <h1 id="section3">Erde – Unser Zuhause</h1>
+    <p class="p">
+      Die Erde ist der einzige bekannte Planet, auf dem Leben existiert. Sie
+      besitzt flüssiges Wasser, eine schützende Atmosphäre und ein stabiles
+      Klima. Diese Bedingungen ermöglichen Pflanzen, Tiere und Menschen. Die
+      Erde hat einen Mond, der Ebbe und Flut beeinflusst. Außerdem schützt das
+      Magnetfeld der Erde uns vor gefährlicher Strahlung aus dem Weltall.
+    </p>
+    <hr />
+    <h1 id="section4">Mars – Der rote Planet</h1>
+    <p class="p">
+      Der Mars wird wegen seiner rötlichen Farbe „roter Planet“ genannt. Diese
+      Farbe entsteht durch Eisenoxid, also Rost, im Boden. Der Mars ist deutlich
+      kälter als die Erde und hat eine sehr dünne Atmosphäre. Es gibt Hinweise
+      darauf, dass es früher Wasser auf dem Mars gab, zum Beispiel alte
+      Flusstäler. Deshalb wird der Mars intensiv erforscht, besonders in der
+      Hoffnung, Spuren von früherem Leben zu finden.
+    </p>
+    <hr />
+    <h1 id="section5">Jupiter – Der größte Planet</h1>
+    <p class="p">
+      Jupiter ist der größte Planet im Sonnensystem und besteht fast vollständig
+      aus Gas. Er hat keinen festen Boden wie die Erde. Besonders bekannt ist
+      der „Große Rote Fleck“, ein gigantischer Sturm, der seit hunderten Jahren
+      existiert. Jupiter besitzt sehr viele Monde, darunter Ganymed, der größte
+      Mond im Sonnensystem. Seine starke Gravitation beeinflusst viele andere
+      Objekte im All.
+    </p>
+    <hr />
+    <h1 id="section6">Saturn – Der Planet mit den Ringen</h1>
+    <p class="p">
+      Saturn ist vor allem für seine beeindruckenden Ringe bekannt. Diese
+      bestehen aus Eis, Staub und Gesteinsbrocken. Auch Saturn ist ein Gasplanet
+      und extrem leicht – theoretisch könnte er auf Wasser schwimmen. Er hat
+      viele Monde, darunter Titan, der eine dichte Atmosphäre besitzt und als
+      sehr interessant für die Forschung gilt.
+    </p>
+    <hr />
+    <h1 id="section7">Uranus – Der kälteste Planet</h1>
+    <p class="p">
+      Uranus ist besonders, weil er fast auf der Seite liegt. Dadurch erleben
+      seine Pole jahrelang Sonne oder Dunkelheit. Seine bläuliche Farbe entsteht
+      durch Methan in der Atmosphäre. Uranus ist extrem kalt und gehört zu den
+      Eisriesen. Er hat Ringe und viele Monde, die nach Figuren aus Literatur
+      benannt sind.
+    </p>
+    <hr />
+    <h1 id="section8">Neptun – Der ferne Eisriese</h1>
+    <p class="p">
+      Neptun ist der am weitesten von der Sonne entfernte Planet. Er ist bekannt
+      für extrem starke Winde, die schneller als 2.000 km/h werden können. Seine
+      tiefblaue Farbe kommt ebenfalls durch Methan zustande. Ein Jahr auf Neptun
+      dauert 165 Erdenjahre, da er so weit von der Sonne entfernt ist.
+    </p>
+    <hr />
+    <br />
+    <p class="p">Diese Webseite wurde erstellt von Anton Kühnert</p>
+    <!-- prettier-ignore -->
+    <p class="p">
+        Quellen:
+        --------
+        Google 
+        Wikipedia
+    </p>
+    <hr />
+    <br />
+  </body>
+</html>
